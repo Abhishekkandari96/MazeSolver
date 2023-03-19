@@ -2,11 +2,13 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
 public class NewClass extends JFrame {
 
+    JButton button1;
     private int[][] maze=  {
                             {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                             {1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1},
@@ -15,8 +17,8 @@ public class NewClass extends JFrame {
                             {1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1},
                             {1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1},
                             {1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1},
-                            {1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1},
-                            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 1},
+                            {1, 0, 1, 0, 1, 1, 1, 0, 1, 9, 1, 0, 1},
+                            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
                             {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
                               };
     public List<Integer> path= new ArrayList<>();                               //for storing coordinate of points responsible for path
@@ -56,7 +58,8 @@ public class NewClass extends JFrame {
             int pathy=path.get(i+1);
 
             g.setColor(Color.GREEN);
-            g.fillRect(30*pathx,30*pathy,30,30);
+            g.fillRect(30*pathx,30*pathy,20,20);
+
 
 
         }
